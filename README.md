@@ -10,13 +10,13 @@ You need an AI coding agent, [uv](https://docs.astral.sh/uv/), and Node.js/npm f
 
 ### Install
 
-From this repository root, install the Skill for Codex:
+From the project where you want to use the Skill, install it from GitHub for Claude Code:
 
 ```sh
-npx skills add ./skills/oep-metadata --skill oep-metadata -a codex --copy
+npx skills add yechenyan/oep-metadata-skill --skill oep-metadata -a claude-code
 ```
 
-For Claude Code replace `-a codex` with `-a claude-code`; include both to install for both. This installs only `skills/oep-metadata/` into the current project. Add `-g` only for a user-wide installation.
+For Codex replace `-a claude-code` with `-a codex`; include both to install for both. This installs only the Skill from `skills/oep-metadata/` into the current project without cloning the repository yourself. Add `-g` only for a user-wide installation.
 
 ### Try the smallest example
 
