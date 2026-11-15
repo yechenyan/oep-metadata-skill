@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An interactive, step-by-step field guide to generating, reviewing, repairing and uploading OEP metadata.">
+<title>OEP Metadata — Workflow field guide</title>
+<link rel="stylesheet" href="docs/guide.css">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="zh-CN" href="index-zh.html">
+<link rel="alternate" hreflang="de" href="index-de.html">
+</head>
+<body>
+<a class="skip" href="#guide">Skip to walkthrough</a>
+<div class="shell">
+<aside class="sidebar" aria-label="Workflow navigation">
+<div class="brand"><span class="mark" aria-hidden="true">m</span><div><strong>OEP Metadata</strong><small>WORKFLOW FIELD GUIDE</small></div></div>
+<div class="eyebrow side-label">Explore a workflow</div>
+<nav id="nav" class="nav" aria-label="Choose a workflow"></nav>
+<div class="side-bottom"><a href="README.md">Read the README ↗</a><span class="dot"></span>OEMetadata 2.0.4<br>Self-contained · works offline</div>
+</aside>
+<main class="main" id="guide">
+<div class="topline"><span class="eyebrow">Documentation / How it works</span><div class="top-actions"><nav class="language-switch" aria-label="Language"><a href="index.html" data-language-link="index.html" hreflang="en" lang="en" aria-current="page">English</a><a href="index-zh.html" data-language-link="index-zh.html" hreflang="zh-CN" lang="zh-CN">Chinese</a><a href="index-de.html" data-language-link="index-de.html" hreflang="de" lang="de">Deutsch</a></nav><a href="#boundaries">Who does what ↓</a></div></div>
+<header class="hero"><div class="eyebrow">One Skill. Five workflows.</div><h1>Follow the work.<br><span>See every handoff.</span></h1><p>Walk through the evidence, decisions and files behind each operation. Choose a workflow, then move through it one step at a time.</p><div class="hero-meta"><span class="pill">31 explained steps</span><span class="pill">Code + host AI + your decisions</span><span class="pill">Illustrative guide · no execution</span></div></header>
+<section aria-labelledby="workflow-title">
+<div class="workflow-head"><div><span class="eyebrow" id="workflow-mode"></span><h2 id="workflow-title"></h2><p id="workflow-description"></p></div><span class="counter" id="counter"></span></div>
+<section class="route-panel" aria-label="Core tool path">
+<div class="route-head"><span class="eyebrow">Core tool path</span><span class="pill" id="route-count"></span></div>
+<ol class="route-list" id="route-list"></ol>
+<p class="route-note" id="route-note"></p>
+<details class="route-options"><summary>Tools used only when needed</summary><div class="optional-grid" id="optional-tools"></div></details>
+<p class="route-help">Select a tool to open its explanation. Counts cover core Skill commands only; AI file operations and model requests are separate. Detailed stages also include human and AI work.</p>
+</section>
+<div class="walkthrough" id="walkthrough">
+<div class="rail"><ol id="steps" class="step-list" aria-label="Workflow steps"></ol></div>
+<div class="stage"><div id="stage-content" class="stage-content" role="region" tabindex="-1" aria-label="Selected step"></div><div class="progress" role="progressbar" aria-label="Walkthrough position" aria-valuemin="1" aria-valuenow="1" aria-valuemax="6"><span id="progress-fill"></span></div><div class="transport"><button type="button" id="play" aria-pressed="false"><span class="play-icon" aria-hidden="true">▶</span> Play steps</button><button type="button" id="previous">← Back</button><button type="button" id="next" class="primary">Next step →</button></div></div>
+</div>
+<p class="sr-only" id="announcement" role="status" aria-live="polite"></p>
+<div class="prompt"><div class="prompt-header"><span class="eyebrow">Try this prompt in your agent</span><button type="button" class="copy" id="copy">Copy prompt</button></div><p id="prompt-text"></p><p style="font-size:11px;color:var(--muted);margin-top:12px">Prompts use Codex syntax. In Claude Code, use <code>/oep-metadata</code>. Command fragments above abbreviate the Python helper invocation; see the README for setup.</p></div>
+<details class="reading" id="reading"><summary>Read the complete walkthrough</summary><ol class="full-steps" id="full-steps"></ol></details>
+</section>
+<details class="quality-guide" id="quality-guarantees"><summary><span class="eyebrow">Returned views and evidence</span><strong>Why collect is smaller, and which checks remain</strong></summary>
+<div class="quality-content"><p>The same four-row example was measured in three representations. These are JSON response sizes, not task-speed guarantees.</p>
+<div class="size-comparison"><article><strong>18,227 B</strong><span>Full response, indented</span><div class="size-track"><i style="width:100%"></i></div></article><article><strong>11,134 B</strong><span>Identical information, compact JSON</span><div class="size-track"><i style="width:61.1%"></i></div></article><article><strong>6,065 B</strong><span>Generation view with deduplication</span><div class="size-track"><i style="width:33.3%"></i></div></article></div>
+<div class="quality-columns"><article><h3>One copy of the evidence</h3><p>Metadata, profile, background text, constraints, snapshots and hashes are preserved. Duplicate profile evidence points to context.profile; review-only lists and internal guards remain available in the full context.</p></article><article><h3>Acceptance and delivery still validate</h3><p>record-metadata checks the document, evidence and bindings before acceptance. deliver checks again. A separate check is available for diagnostics; independent combined review still needs a current conflict-free assessment.</p></article></div>
+<p class="quality-footnote">The AI can query a field with schema --pointer or inspect --view full when needed. Unknown facts remain unknown. Mechanical validity and these small tests do not prove factual correctness for every dataset.</p></div></details>
+<section class="decision-guide" id="review-decisions" aria-labelledby="decision-title">
+<span class="eyebrow">Review results / read by category</span><h2 id="decision-title">A reviewed field is not necessarily a problem.</h2>
+<p>Start with conflicts and unresolved questions. Evidence-supported and not-applicable decisions are recorded separately so they do not inflate the issue list.</p>
+<p>Illustrative example: one field in each category. Actual counts are computed from the review, not from this demonstration.</p>
+<details class="decision-group conflict" open><summary><code>conflict</code> <strong>Conflicts - inspect or correct</strong></summary><p>Evidence contradicts the current value. Inspect the finding, evidence and proposed replacement.</p><p><code>/resources/0/schema/fields/3/unit</code><br><span>Example: the value is GW, while the source declares TWh. A proposed replacement is TWh.</span></p></details>
+<details class="decision-group unknown" open><summary><code>unknown</code> <strong>Unresolved - needs evidence</strong></summary><p>There is not enough evidence to confirm the value. This is not a confirmed error; provide a declaration or retain uncertainty.</p><p><code>/resources/0/schema/fields/0/nullable</code><br><span>Example: no nulls were observed, but no non-null constraint was declared.</span></p></details>
+<details class="decision-group supported"><summary><code>supported</code> <strong>Evidence-supported - expand to inspect</strong></summary><p>Available evidence supports the current value within the reviewed scope. Usually no action is needed.</p><p><code>/resources/0/schema/fields/1/description</code><br><span>Example: the alpha-3 description agrees with the codebook and observed country codes.</span></p></details>
+<details class="decision-group not-applicable"><summary><code>not_applicable</code> <strong>Not applicable - expand to inspect</strong></summary><p>The concept does not apply, with a stated reason. Missing evidence alone does not establish inapplicability.</p><p><code>/resources/0/context/grantNo</code><br><span>Example: an authoritative declaration confirms there was no grant funding, so a grant number is not applicable.</span></p></details>
+<div class="target-example"><h3>A correction and a new review are separate steps</h3><p>Illustrative example; these counts are not a live run.</p><ol><li><span>Original review.md</span><strong>1 conflict · 1 unknown</strong></li><li><span>metadata.suggested.json</span><strong>Documented unit corrected</strong></li><li><span>New review of the suggested copy</span><strong>0 conflicts · 1 unknown</strong></li></ol><p>The old report keeps its original findings. A fresh review can clear the corrected conflict; an unsupported license or date still needs evidence.</p></div>
+<p class="decision-footnote">These are decision categories, not severity scores. Program checks appear directly in review.md. Read summary.md for grouped actions; there is no separate validation or question JSON to interpret.</p>
+</section>
+<section class="notes" id="boundaries" aria-labelledby="boundary-title"><span class="eyebrow">A division of responsibilities</span><h2 id="boundary-title">The AI drives the task. Tools check its work.</h2><div class="roles"><article class="role"><h3>You set the scope.</h3><p>Choose the inputs and target, supply missing facts, inspect the results, and authorize a specific remote action when needed. A local draft does not authorize upload.</p></article><article class="role"><h3>The host AI leads.</h3><p>The AI reads, asks, writes, checks, repairs and decides when to deliver. It coordinates any fresh independent Reviewer; Python tools do not call a model or choose roles.</p></article><article class="role"><h3>Python binds and checks.</h3><p>Snapshots, hashes and validation gates make accepted results traceable. Tool responses inform the AI; they do not schedule a workflow or prove factual correctness.</p></article></div><div class="footer-note"><strong>Read the outcome, not just the badge.</strong> Generated metadata must pass checks before delivery. If honest completion is impossible, the AI stops with a concise explanation. OEP uploads need verified readback; production writes remain unverified by this project.</div></section>
+<footer class="footer"><span>OEP Metadata / Interactive companion to the README</span><span><a href="skills/oep-metadata/SKILL.md">Skill entry</a> · <a href="README.md">Setup &amp; commands</a></span></footer>
+<noscript>This interactive walkthrough needs JavaScript. Open the README or the linked Skill entry for the written instructions.</noscript>
+</main></div>
+<script src="docs/workflows.js"></script>
+<script src="locales/en.js"></script>
+<script src="docs/ai-examples.js"></script>
+<script src="docs/guide.js"></script>
+</body>
+</html>

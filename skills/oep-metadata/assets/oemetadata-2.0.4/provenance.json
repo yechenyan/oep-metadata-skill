@@ -1,0 +1,24 @@
+{
+  "package": "oemetadata",
+  "version": "2.0.4",
+  "retrieved": "2026-10-25",
+  "source": "https://pypi.org/project/oemetadata/2.0.4/",
+  "interface": "omi==1.1.0 omi.base.get_metadata_specification(\"OEMetadata-2.0\")",
+  "license": "MIT",
+  "license_file": "LICENSE.txt",
+  "files": {
+    "template.json": {
+      "sha256": "f52827ea864cb6941f9c8beaaf5033d3dadc68d173416c4039175162b4350384",
+      "package_path": "oemetadata/v2/v20/template.json"
+    },
+    "schema.json": {
+      "sha256": "f9a9e979d302bf80186861e1bf60faf2555786195f2c63923ac553fbd4eec1b7",
+      "package_path": "oemetadata/v2/v20/schema.json"
+    },
+    "LICENSE.txt": {
+      "sha256": "7a055f1b22163edf572bd1165f624b64c8e95670bff7494d40c01c9c53ba5613",
+      "package_path": "LICENSE.txt"
+    }
+  },
+  "note": "Assets copied from the published pinned Python package, not the repository checkout. The checkout at d0da1c08e1a3dc17a8be68898f08d21f4b609239 differs in one source-license example URL in schema.json. This affects schema provenance hashes, not constraints."
+}

@@ -1,0 +1,10 @@
+{
+  "dataset": "SPDX License List factual identifier index",
+  "version": "3.27.0",
+  "retrieved": "2026-10-25",
+  "source": "https://raw.githubusercontent.com/spdx/license-list-data/v3.27.0/json/licenses.json",
+  "sha256": "157789ba91984aecba5c67b84168dbbd41a235b910a7569aa64bf42a88b24290",
+  "license_status": "No standalone repository license grant located in the tagged source; no license grant is inferred. This is the factual identifier/name/deprecation index, not a redistribution of individual license texts.",
+  "upstream_usage_documentation": "https://github.com/spdx/license-list-XML/blob/v3.27.0/README.md#consuming-license-data-from-this-repository",
+  "scope": "Validates identifier membership/deprecation only. Does not validate licensing authority, custom license text or SPDX expressions."
+}

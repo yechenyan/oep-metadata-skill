@@ -1,0 +1,16 @@
+[project]
+name = "oep-metadata-skill"
+version = "0.1.0"
+description = "Evidence-driven OEMetadata preparation, review, repair and OEP upload adapters"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "omi==1.1.0",
+  "oemetadata==2.0.4",
+  "jsonschema[format-nongpl]==4.26.0",
+  "requests==2.32.5",
+  "chardet==5.2.0",
+  "rdflib==7.6.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pyyaml>=6,<7"]
